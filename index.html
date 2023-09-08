@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Hanifah & Agung</title>
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <div class="background">
+        <img src="img/right.png" alt="floral" class="right">
+        <img src="img/left.png" alt="floral" class="left">
+    </div>
+
+    <main id="cover">
+
+        <div class="circle"></div>
+
+        <section>
+            <h5>UNDANGAN PERNIKAHAN</h5>
+            <h1>
+                Hanifah<br>
+                <span>&amp;</span> aGung
+            </h1>
+            <h2>Sabtu, 23 Sept 2023</h2>
+        </section>
+
+        <img class="divider" src="img/divider.svg" alt="___">
+
+        <img id="cover_img" src="img/cover1.png" alt="Hanifah &amp; Agung">
+
+    </main>
+
+    <article>
+        <section>
+            <div>
+                <br>
+                <br>
+                <img width="280" height="39" src="img/bismillahirrahmanirrahim.png" alt="Bismillahirrahmanirrahim">
+                <p>Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+
+                <p>Insya Allah kami bermaksud menyelenggarakan Pernikahan putra-putri kami:</p>
+
+                <h2>Nur Hanifah Zhafirah</h2>
+                <h3>Putri Pertama dari Bapak H. Muhamad Zaenal<br>&amp; Ibu Siti Maimun</h3>
+                <h6>&amp;</h6>
+                <h2>aGung anwar Hermawan</h2>
+                <h3>Putra ke-4 (bungsu) dari Alm. Bapak Subandi<br>&amp; Almh. Ibu Katni</h3>
+
+
+                <br>
+                <p>Insya Allah Resepsi &amp; Akad Nikah<br>akan diselenggarakan pada:</p>
+                <h4>Hari Sabtu, 23 September 2023<br>
+                    <a href="https://maps.app.goo.gl/jibtDJ2wtJbaaNFx8" target="_blank">
+                        di Jl. RE. Soemantadiredja 37-50, RT.03/RW.02<br>
+                        Pamoyanan, Bogor Selatan
+                    </a>
+                    <a class="btn" href="https://maps.app.goo.gl/jibtDJ2wtJbaaNFx8" target="_blank">Lihat Lokasi</a>
+                </h4>
+
+                <p>Rangkaian Acara:</p>
+                <p>Akad Nikah pukul 09:00</p>
+                <h5>Resepsi pukul 10:00-17:00</h5>
+
+                <div class="countdown-wrapper">
+                    <p id="countdown"></p>
+                    <p id="countdown_title">menuju akad Nikah</p>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <article class="last">
+        <section>
+            <div>
+                <p>Merupakan kehormatan &amp; kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+                    untuk memberikan doa restu kepada kedua mempelai.</p>
+                <p>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+
+                <div>
+                    <p>Kami yang berbahagia,</p>
+                    <p>Keluarga Alm. Bapak Subandi<br>&amp; Almh. Ibu Katni</p>
+                    <p>Keluarga Bapak H. Muhamad Zaenal<br>&amp; Ibu Siti Maimun</p>
+                </div>
+
+                <h3>Hanifah <span>&amp;</span> aGung</h3>
+                <img class="footer" src="img/footer.png" alt="Hanifah &amp; Agung">
+            </div>
+        </section>
+    </article>
+
+    <article class="gift">
+        <section>
+            <div>
+                <h2>kiRim aMplOp</h2>
+                <br>
+                <div class="alert">
+                    <img src="img/bca.png" alt="BCA" class="bank">
+                    <h4>a/n Nur Hanifah Zhafirah<br><span id="NoRekHanifah">4270 102 731</span></h4>
+                    <a class="btn btn-alert" id="CopyRekHanifah">Salin No. Rekening</a>
+                </div>
+                <br>
+                <div class="alert">
+                    <img src="img/bca.png" alt="BCA" class="bank">
+                    <h4>a/n Agung Anwar Hermawan<br><span id="NoRekAgung">4270 100 720</span></h4>
+                    <a class="btn btn-alert" id="CopyRekAgung">Salin No. Rekening</a>
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <article class="confirm">
+        <section>
+            <div>
+                <h2>Kirimkan Ucapan<br>&amp; Doa restu</h2>
+                <form action="" class="form">
+                    <div>
+                        <input name="nama" type="text" placeholder="Nama">
+                    </div>
+                    <div>
+                        <textarea name="ucapan" id="ucapan" rows="6" placeholder="Tulis Ucapan dan Doa"></textarea>
+                    </div>
+                    <div>
+                        <select name="konfirmasi" id="konfirmasi">
+                            <option value="">Konfirmasi Kehadiran</option>
+                            <option value="1">Hadir</option>
+                            <option value="0">Tidak Hadir</option>
+                        </select>
+                    </div>
+                    <button class="btn" type="submit">Kirim</button>
+                </form>
+                <hr>
+                <div class="list-ucapan"></div>
+            </div>
+            </div>
+        </section>
+    </article>
+
+
+    <script>
+
+        // Function to handle scroll events
+        function handleScroll() {
+            const cover = document.getElementById('cover');
+            if (window.scrollY >= 10) {
+                cover.classList.add('down');
+            } else {
+                cover.classList.remove('down');
+            }
+        }
+
+        // Attach the 'scroll' event listener to the window
+        window.addEventListener('scroll', handleScroll);
+
+        // Countdown
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sep 23, 2023 09:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="countdown"
+
+            if (days == 0) {
+                document.getElementById("countdown").innerHTML = hours + ":"
+                    + minutes + ":" + seconds;
+            } else {
+                document.getElementById("countdown").innerHTML = days + " <span>hari</span> " + hours + ":"
+                    + minutes + ":" + seconds;
+            }
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "";
+            }
+        }, 1000);
+
+        // copy rek
+        const copyButtons = document.querySelectorAll('.btn-alert');
+
+        copyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const spanId = button.getAttribute('id').replace('CopyRek', 'NoRek');
+                const spanElement = document.getElementById(spanId);
+
+                if (spanElement) {
+                    const textToCopy = spanElement.textContent.replace(/\s/g, ''); // Remove spaces
+                    copyToClipboard(textToCopy);
+                    alert(`No Rekening "${textToCopy}" telah disalin`);
+                }
+            });
+        });
+
+        function copyToClipboard(text) {
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+        }
+
+        const listUcapan = document.querySelector('.list-ucapan')
+        let resvData = [];
+
+        const loadData = async () => {
+            try{
+                const url   = await fetch('https://rest-api-hanifah-agung.rmediasolutionsid.com/reservation',{
+                    method: "GET",
+                    headers: {
+                        "Contennt-Type": "application/json",
+                        Accept: "application/json"
+                    }
+                });
+                //const url   = await fetch('https://rest-api-hanifah-agung.rmediasolutionsid.com/reservation');
+                resvData    = await url.json();
+
+                console.log(resvData);
+                console.log(resvData.data_reservation.length);
+
+                if(resvData.data_reservation.length > 0){
+                    loadResvData(resvData.data_reservation);
+                }
+                else{
+                    listUcapan.innerHTML = "<center><p><strong>Tidak Ada Data<strong></p><center><hr>";
+                }
+
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        const loadResvData = (data) => {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            const output = data.map((el) => {
+                var dateCreated = new Date(`+ ${el.created_at} + `).getTime();
+                return `
+                    <div class="ucapan">
+                        <p class="nama">${el.name}<br><small>${el.created_at}</small></p>
+                        <p>${el.message}</p>
+                        <hr>
+                    </div>
+                `;
+            }).join('')
+            listUcapan.innerHTML = output;
+        }
+        
+        //get load data reservation
+        loadData();
+
+        const formEl = document.querySelector('.form');
+
+        formEl.addEventListener('submit', event => {
+            event.preventDefault();
+
+            const formData  = new FormData(formEl);
+            const data      = new URLSearchParams(formData);
+
+            console.log(data);
+
+            fetch('https://rest-api-hanifah-agung.rmediasolutionsid.com/reservation', {
+                method : 'POST',
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: "same-origin", // include, *same-origin, omit
+                headers: {
+                    "Content-Type": "application/json",
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: "follow", // manual, *follow, error
+                referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+                body: JSON.stringify(data), // body data type must match "Content-Type" header
+            }).then(res => res.json())
+              .then(data => console.log(data))
+              .catch(error => console.log(error))
+        })
+
+    </script>
+
+</body>
+
+</html>
